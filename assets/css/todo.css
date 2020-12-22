@@ -1,0 +1,129 @@
+body {
+  background-color: lavender;
+}
+
+h2 {
+  text-align: center;
+  color: #754fb3;
+}
+
+h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container {
+  background-color: white;
+  margin-top: 100px !important;
+}
+
+.btn-info {
+  background-color: #6f42c1;
+  border-color: #6610f2;
+  margin-left: 5px;
+}
+
+.stop-watch {
+  font-size : 5rem;
+  text-align: center;
+}
+
+.btns {
+  text-align: center;
+  padding: 30px;
+}
+
+.recordLine {
+  width: fit-content;
+  margin: auto;
+}
+
+.list-group-item-warning{
+  background-color: #ab42c13b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+main {
+  margin: 60px auto 0; /* margin-top을 header가 차지하는 만큼 줌 */
+  padding: 2em 4em;
+}
+
+main > p {
+  margin-top: 2em;
+  text-align: justify;
+}
+
+#menu-button {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+#menu-button:focus {
+  outline: none;
+}
+
+#menu-button > .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 1.5px;
+  margin: 3px auto;
+}
+
+#side-menu {
+  position: fixed;
+  top: 60px; /* header의 높이 다음에 나올 수 있도록 */
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #ddd;
+  background-color: #b7a3da;
+  width: 200px;
+  padding: 10px 20px;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.4);
+  transition-duration: 500ms;
+}
+
+#side-menu.hidden {
+  left: -100%;
+}
+
+#side-menu > ul {
+  list-style: none;
+}
+
+#side-menu > ul > li {
+  margin: 20px 0;
+}
+
+#side-menu > ul > li > a {
+  text-decoration: none;
+  color: rgb(110, 12, 97);
+}
+
+#side-menu > ul > li > a:hover {
+  font-weight: bold;
+  color: rgb(61, 1, 53);
+}

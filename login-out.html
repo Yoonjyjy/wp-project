@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Default Event</title>
+</head>
+<body>
+  <h3>회원 가입</h3>
+  <form id="sign-up">
+    <label for="user-id">아이디</label><br>
+    <input type="text" name="userId" id="user-id"><br>
+    <label for="password">비밀번호</label><br>
+    <input type="password" name="password" id="password"><br>
+    <label for="confirm-password">비밀번호 확인</label><br>
+    <input type="password" name="confirmPassword" id="confirm-password"><br>
+    <input type="submit" value="회원가입">
+  </form>
+
+  <script>
+    const form = document.querySelector('#sign-up');
+  
+    form.onsubmit = function () {
+      try {
+        const userJSON = formToJSON();
+        alert(userJSON);
+        // userJSON을 서버로 보내는 코드
+      } catch (e) {
+        alert(e.message);
+        return false;
+      }
+    };
+  
+    function formToJSON() {
+      const userId = document.querySelector('#user-id').value;
+      const password = document.querySelector('#password').value;
+      const confirmPassword = document.querySelector('#confirm-password').value;
+  
+      if (!userId.trim()) throw new Error('아이디를 입력해주세요');
+      else if (!password) throw new Error('비밀번호를 입력해주세요');
+      else if (password !== confirmPassword) throw new Error('비밀번호가 일치하지 않습니다.');
+  
+      return JSON.stringify({userId, password});
+      }
+    </script>
+  
+</body>
+</html>
