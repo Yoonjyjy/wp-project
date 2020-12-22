@@ -15,6 +15,7 @@ h5 {
 .container {
   background-color: white;
   margin-top: 100px !important;
+  max-width: 600px;
 }
 
 .btn-info {
@@ -127,4 +128,12 @@ main > p {
 #side-menu > ul > li > a:hover {
   font-weight: bold;
   color: rgb(61, 1, 53);
+}
+
+footer {
+  grid-area: footer;
+  /* background-color: gray; */
+  text-align: center;
+  margin: 10px;
+  height: 100px;
 }
